@@ -51,7 +51,24 @@
                         \item Host(10.7.174.111) sends an HTTP respond to me(10.184.52.92), sending the web-page code
                         \item Complex web-pages consist of references to many other files(.css, .js, etc.), photos, gifs,  etc. in its HTML code
                         \item My browser starts rendering the received code. As soon as it finds references to any file that is located in the server, it sends a new HTTP request, asking for the content of that file
-                        \item As the browser encounters file references, it keeps asking for the content via HTTP requests
+                        \item As the browser encounters file references while rendering, it keeps asking for the content via HTTP requests
+                    \end{itemize}{}
+                \item TCP filter
+                    \begin{itemize}
+                        \item Optimization done by the browser:
+                        \begin{itemize}
+                            \item There are multiple TCP connections made from source port to destination port(80). Each TCP connection defers in source port(43001-43187). By default each connection is persistent unless client explicitly signals the closing of TCP connection \item Multiple HTTP requests-responses can be made on the same TCP connection. In general these requests are pipe-lined
+                            \item Such HTTP requests-responses can be made on all the TCP connections between the source and the destination host
+                            \item This configuration makes TCP protocols to work more efficiently, and reduces the network traffic
+                        \end{itemize}{}
+                        \item Yes, there are some content objects that are fetched on the same TCP port because of multiple HTTP requests can be made on the same TCP connection
+                        \item After any TCP connection is established, client sends an HTTP request to server and as soon as the server receives the request it sends back a TCP ack packet to the client and vice versa
+                    \end{itemize}{}
+                \item Time taken to download the complete web-page
+                    \begin{itemize}
+                        \item Time at the first DNS query: 2.311199694 sec
+                        \item Time at the last HTTP response: 5.853938462 sec
+                        \item Total time taken to download the complete web-page is: 3.54273877 sec
                     \end{itemize}{}
             \end{enumerate}{}
     \end{enumerate}
