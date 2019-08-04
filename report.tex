@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{listings}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\tabcolsep}{18pt}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkbordercolor = {white},
+    linkcolor = {red},
+}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    % total={170mm,257mm},
+    left=3mm,
+    top=3mm,
+}
+
+\title{Assignment 1}
+\author{Gohil Dwijesh \\ 2017CS50407
+        \and Prafful \\ 2017CS10369}
+\date{August 2019}
+    
+\begin{document}
+\maketitle
+%-----------------------------------------------------------------------
+\section{Local network analysis}
+%-----------------------------------------------------------------------
+\section{Internet Architecture}
+%-----------------------------------------------------------------------
+\section{Packet Analysis}
+    \begin{enumerate}[a)]
+        \item Grabbing and analysing packats while visiting \href{www.iitd.ac.in}{www.iitd.ac.in} website
+            \begin{enumerate}[i)]
+                \item DNS filter
+                    \begin{itemize}
+                        \item My laptop(10.184.52.92) sends DNS query to IIT Delhi DNS server(10.10.2.2)
+                        \item Asking for IP addresses for the requested domain name (\href{www.iitd.ac.in}{iitd.ac.in}) and all the domain names which are linked with that web page(i.e., \href{www.library.iitd.ac.in}{library.iitd.ac.in})
+                        \item IIT Delhi DNS server replies with IP address of the queried domain name. For example, reply for \href{www.iitd.ac.in}{iitd.ac.in} domain name is 10.7.174.111
+                        \item Time taken for the both query and reply for \href{www.iitd.ac.in}{iitd.ac.in} domain name is 0.008394231 seconds
+                        \item Different time taken for different queries
+                    \end{itemize}{}
+                \item HTTP filter
+                    \begin{itemize}
+                        \item 150 HTTP requests found
+                        \item My laptop(10.184.52.92) sends an HTTP request to \href{www.iitd.ac.in}{iitd.ac.in}(10.7.174.111) website host, asking for the html(or similar) code of the web-page
+                        \item Host(10.7.174.111) sends an HTTP respond to me(10.184.52.92), sending the web-page code
+                        \item Complex web-pages consist of references to many other files(.css, .js, etc.), photos, gifs,  etc. in its HTML code
+                        \item My browser starts rendering the received code. As soon as it finds references to any file that is located in the server, it sends a new HTTP request, asking for the content of that file
+                        \item As the browser encounters file references, it keeps asking for the content via HTTP requests
+                    \end{itemize}{}
+            \end{enumerate}{}
+    \end{enumerate}
+%-----------------------------------------------------------------------
+\section{Tinkering with the network setting}
+\subsection{Where to configure IP address and DNS server}
+    \begin{itemize}
+        \item Linux: add the following to /etc/network/interfaces file.
+            \begin{lstlisting}    
+                auto eth0
+                iface eth0 inet static    
+                    address 10.0.0.41
+                    netmask 255.255.255.0
+                    network 10.0.0.0
+                    broadcast 10.0.0.255
+                    gateway 10.0.0.1
+                    dns-nameservers 10.0.0.1 8.8.8.8
+                    dns-domain acme.com
+                    dns-search acme.com
+            \end{lstlisting}
+    \end{itemize}{}
+\subsection{Configure static IP address on android}
+    \begin{itemize}
+        \item wifi settings -$>$ networks details -$>$ IP setting(change it from DHCP to Static) -$>$ (fill the details)
+    \end{itemize}
+\subsection{Static IP Assignment vs Dynamic IP Assignment}
+    \begin{itemize}
+        \item Static IP addresses are the fixed IP addresses given to any device on internet and Dynamic IP addresses change over time(dynamically assigned).
+        \item Static IP addresses are more vulnerable compared to Dynamic ones. So mail servers, gaming servers which are not worried about their locations, generally use static IP addressing, while business, offices, etc. uses dynamic IP addressing.
+    \end{itemize}
+%-----------------------------------------------------------------------
+\end{document}
