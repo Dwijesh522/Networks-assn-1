@@ -7,6 +7,7 @@
 \usetikzlibrary{shapes.geometric, arrows}
 \setlength{\tabcolsep}{18pt}
 \usepackage{hyperref}
+\usepackage{rotating}
 \hypersetup{
     colorlinks = true,
     linkbordercolor = {white},
@@ -29,6 +30,52 @@
 \maketitle
 %-----------------------------------------------------------------------
 \section{Local network analysis}
+    \begin{table}[ht]
+        \centering
+        \resizebox{\textwidth}{!}{%
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+                 \hline
+                    \multicolumn{3}{|c|}{Day-1} & \multicolumn{3}{|c|}{Day-2} & \multicolumn{3}{|c|}{Day-3}\\
+                 \hline
+                    Afternoon & Evening & Night & Afternoon & Evening & Night & Afternoon & Evening & Night\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+            \end{tabular}{}
+        }
+        \caption{Analysis over Ethernet}
+    \end{table}
+    \begin{table}[ht]
+        \centering
+        \resizebox{\textwidth}{!}{%
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+                 \hline
+                    \multicolumn{3}{|c|}{Day-1} & \multicolumn{3}{|c|}{Day-2} & \multicolumn{3}{|c|}{Day-3}\\
+                 \hline
+                    Afternoon & Evening & Night & Afternoon & Evening & Night & Afternoon & Evening & Night\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                \hline
+            \end{tabular}{}
+        }
+        \caption{Analysis over wife}
+    \end{table}
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
 %-----------------------------------------------------------------------
@@ -69,6 +116,27 @@
                         \item Time at the first DNS query: 2.311199694 sec
                         \item Time at the last HTTP response: 5.853938462 sec
                         \item Total time taken to download the complete web-page is: 3.54273877 sec
+                    \end{itemize}{}
+                \item HTTP vs HTTPS protocols
+                    \begin{itemize}
+                        \item Observations:
+                            \begin{itemize}
+                                \item After tracing for \href{http://www.indianexpress.com}{http://www.indianexpress.com} website and analyzing the packets we could find exactly one HTTP packet and instead we found TLSv1.2 packets
+                            \end{itemize}{}
+                        \item HTTP vs HTTPS:
+                            \begin{itemize}
+                                \item HTTP response packet contains:
+                                    \begin{lstlisting}    
+    HTTP/1.1 301 Moved Permanently
+    Location: https://indianexpress.com
+                                    \end{lstlisting}
+                                \item HTTPS is more secure than HTTP. It consists of SSL certificate that encrypts the data being transferred on the network for the security purposes. It also uses TLS(Transport Layer Security) protocol to prevent the data being modified or corrupted
+                                \item That is why we see TLSv1.2 packets instead of HTTP packets
+                            \end{itemize}{}
+                        \item Take home message:
+                            \begin{itemize}
+                                \item Sensitive websites that involve routing of sensitive user data, prefer secure connection. Indianexpress also uses the secure connection, so we can not see the data being transffered(in this case: the webpage content), because it is encrypted using SSL certificate.
+                            \end{itemize}{}
                     \end{itemize}{}
             \end{enumerate}{}
     \end{enumerate}
