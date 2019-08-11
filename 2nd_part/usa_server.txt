@@ -1,0 +1,101 @@
+tracing path from www.net.princeton.edu to 129.97.208.23 ...
+
+traceroute to 129.97.208.23 (129.97.208.23), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  200.321 ms  10.997 ms  0.806 ms
+ 2  rtr-border-87-router.princeton.edu (128.112.12.78)  1.098 ms rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  1.052 ms  1.198 ms
+ 3  v1205.core1.nyc4.he.net (216.66.49.73)  2.605 ms te0-0-1-2.nr11.b003003-4.phl03.atlas.cogentco.com (38.122.150.1)  2.893 ms v1205.core1.nyc4.he.net (216.66.49.73)  2.484 ms
+ 4  100ge8-1.core1.nyc6.he.net (184.105.64.178)  30.736 ms  2.617 ms te0-7-1-1.rcr21.phl03.atlas.cogentco.com (154.24.17.141)  2.864 ms
+ 5  decix-nyc.er1.60hud.jfk.as40191.net (206.82.104.25)  16.851 ms  16.829 ms be3164.rcr22.phl01.atlas.cogentco.com (154.54.25.141)  3.303 ms
+ 6  * be2333.ccr42.jfk02.atlas.cogentco.com (154.54.5.1)  5.451 ms  5.152 ms
+ 7  74-123-93-154.zerofail.com (74.123.93.154)  20.221 ms be2890.ccr22.cle04.atlas.cogentco.com (154.54.82.245)  17.415 ms 74-123-93-154.zerofail.com (74.123.93.154)  20.326 ms
+ 8  * be2994.ccr32.yyz02.atlas.cogentco.com (154.54.31.234)  24.710 ms  24.760 ms
+ 9  38.88.241.242 (38.88.241.242)  23.686 ms  22.945 ms  22.786 ms
+10  74-123-93-154.zerofail.com (74.123.93.154)  26.295 ms  26.001 ms  26.095 ms
+11  * * *
+12  wms.uwaterloo.ca (129.97.208.23)  20.550 ms * *
+13  * * wms.uwaterloo.ca (129.97.208.23)  20.240 ms !N
+14  wms.uwaterloo.ca (129.97.208.23)  20.298 ms !N  20.076 ms !N  20.254 ms !N
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+uct:
+
+traceroute to 137.158.154.230 (137.158.154.230), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  1.212 ms  0.638 ms  0.412 ms
+ 2  rtr-border-87-router.princeton.edu (128.112.12.78)  1.181 ms rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  1.167 ms rtr-border-87-router.princeton.edu (128.112.12.78)  1.306 ms
+ 3  local1.princeton.magpi.net (216.27.98.113)  2.402 ms  2.333 ms  2.271 ms
+ 4  216.27.100.18 (216.27.100.18)  2.384 ms  6.923 ms  2.519 ms
+ 5  216.27.100.18 (216.27.100.18)  2.733 ms et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  6.359 ms 216.27.100.18 (216.27.100.18)  2.743 ms
+ 6  et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  4.871 ms vlan-127.rtr.newy32aoa.neaar.net (198.71.45.193)  4.471 ms et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  4.944 ms
+ 7  xe-11-3-0-420-ldn1-ir1.net.tenet.ac.za (155.232.212.108)  77.244 ms  77.511 ms vlan-127.rtr.newy32aoa.neaar.net (198.71.45.193)  4.922 ms
+ 8  xe-1-0-3-10-cpt1-ir1.net.tenet.ac.za (155.232.1.14)  215.830 ms xe-11-3-0-420-ldn1-ir1.net.tenet.ac.za (155.232.212.108)  80.626 ms  78.174 ms
+ 9  xe-1-0-3-10-cpt1-ir1.net.tenet.ac.za (155.232.1.14)  215.574 ms  215.771 ms  215.618 ms
+10  pc3-cpt2-p1.net.tenet.ac.za (155.232.64.75)  215.918 ms be1-104-cpt2-pe1.net.tenet.ac.za (155.232.64.73)  217.879 ms pc3-cpt2-p1.net.tenet.ac.za (155.232.64.75)  215.922 ms
+11  155.232.27.78 (155.232.27.78)  216.949 ms  216.938 ms be1-104-cpt2-pe1.net.tenet.ac.za (155.232.64.73)  217.191 ms
+12  137.158.248.97 (137.158.248.97)  218.023 ms 155.232.27.78 (155.232.27.78)  216.711 ms  216.841 ms
+13  * 137.158.248.97 (137.158.248.97)  217.689 ms *
+14  137.158.154.1 (137.158.154.1)  219.184 ms  219.181 ms  219.321 ms
+15  ecm-vip-prd.uct.ac.za (137.158.154.230)  217.248 ms  217.298 ms 137.158.154.1 (137.158.154.1)  218.909 ms
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+iitd:
+
+traceroute to 103.27.9.20 (103.27.9.20), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  0.931 ms  0.557 ms  0.447 ms
+ 2  rtr-border-87-router.princeton.edu (128.112.12.78)  1.371 ms rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  1.562 ms rtr-border-87-router.princeton.edu (128.112.12.78)  1.275 ms
+ 3  local1.princeton.magpi.net (216.27.98.113)  2.498 ms  2.404 ms rtr-border-hpcrc-router.princeton.edu (204.153.48.54)  1.946 ms
+ 4  216.27.100.18 (216.27.100.18)  2.363 ms  2.349 ms  2.316 ms
+ 5  216.27.100.18 (216.27.100.18)  2.767 ms et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  4.315 ms 216.27.100.18 (216.27.100.18)  3.051 ms
+ 6  et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  4.682 ms 180.149.48.12 (180.149.48.12)  94.880 ms et-7-1-0.4079.rtsw.newy32aoa.net.internet2.edu (162.252.70.102)  4.752 ms
+ 7  180.149.48.1 (180.149.48.1)  214.100 ms  214.050 ms 180.149.48.12 (180.149.48.12)  95.260 ms
+ 8  180.149.48.5 (180.149.48.5)  214.759 ms 180.149.48.1 (180.149.48.1)  214.166 ms 180.149.48.21 (180.149.48.21)  95.608 ms
+ 9  * 180.149.48.5 (180.149.48.5)  214.654 ms  214.902 ms
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+google:
+
+tracing path from www.net.princeton.edu to 172.217.12.164 ...
+
+traceroute to 172.217.12.164 (172.217.12.164), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  1.037 ms  0.826 ms  0.583 ms
+ 2  rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  3.008 ms rtr-border-87-router.princeton.edu (128.112.12.78)  1.356 ms  1.233 ms
+ 3  v1205.core1.nyc4.he.net (216.66.49.73)  2.604 ms  2.403 ms rtr-border-87-router.princeton.edu (204.153.48.49)  1.606 ms
+ 4  v1205.core1.nyc4.he.net (216.66.49.73)  2.883 ms  2.864 ms  3.165 ms
+ 5  core1-0-0-8.lga.net.google.com (198.32.118.39)  2.971 ms  3.210 ms  3.036 ms
+ 6  108.170.248.1 (108.170.248.1)  4.827 ms 172.253.69.227 (172.253.69.227)  3.525 ms  3.358 ms
+ 7  lga25s62-in-f4.1e100.net (172.217.12.164)  3.330 ms  3.952 ms 172.253.69.227 (172.253.69.227)  3.771 ms
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+facebook:
+
+traceroute to 31.13.80.36 (31.13.80.36), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  1.219 ms  0.745 ms  0.544 ms
+ 2  rtr-border-87-router.princeton.edu (128.112.12.78)  16.360 ms rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  1.452 ms  1.655 ms
+ 3  v1205.core1.nyc4.he.net (216.66.49.73)  2.602 ms te0-0-1-2.nr11.b003003-4.phl03.atlas.cogentco.com (38.122.150.1)  3.154 ms v1205.core1.nyc4.he.net (216.66.49.73)  2.555 ms
+ 4  100ge14-1.core1.tor1.he.net (184.105.80.10)  12.187 ms te0-0-1-1.rcr21.phl03.atlas.cogentco.com (154.24.4.169)  3.044 ms 100ge14-1.core1.tor1.he.net (184.105.80.10)  12.391 ms
+ 5  be3163.rcr21.phl01.atlas.cogentco.com (154.54.7.1)  3.245 ms  3.463 ms facebook-b.ip4.torontointernetxchange.net (206.108.35.3)  19.612 ms
+ 6  be2364.ccr41.jfk02.atlas.cogentco.com (154.54.3.141)  5.478 ms  5.357 ms po104.psw03.yyz1.tfbnw.net (31.13.25.239)  18.643 ms
+ 7  173.252.67.15 (173.252.67.15)  18.584 ms be2889.ccr21.cle04.atlas.cogentco.com (154.54.47.49)  17.393 ms 173.252.67.169 (173.252.67.169)  18.675 ms
+ 8  edge-star-mini-shv-01-yyz1.facebook.com (31.13.80.36)  18.472 ms be2994.ccr32.yyz02.atlas.cogentco.com (154.54.31.234)  24.661 ms edge-star-mini-shv-01-yyz1.facebook.com (31.13.80.36)  18.394 ms
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
