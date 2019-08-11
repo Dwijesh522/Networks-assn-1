@@ -38,33 +38,29 @@
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
                  \hline
-                    \multicolumn{3}{|c|}{Day-1} & \multicolumn{3}{|c|}{Day-2} & \multicolumn{3}{|c|}{Day-3}\\
+                    Day-1 & \multicolumn{2}{|c|}{11/8/19} & \multicolumn{2}{|c|}{Day-3}\\
                  \hline
-                    Afternoon & Evening & Night & Afternoon(3pm) & Evening & Night & Afternoon & Evening & Night\\
+                    Afternoon & Afternoon(3pm) & Night & Afternoon & Night\\
                 \hline
                     \textbf{10.243.144.0:} 10.243.144.1, 10.243.144.164 
                     & -1 
                     & -1 
                     & -1
-                    & -1 & -1 & -1 & -1 & -1\\
+                    & -1\\
                 \hline
                     \textbf{10.254.243.0:} 10.254.243.1, 10.254.243.2, 10.254.243.5, 10.254.243.6 
-                    & -1 
-                    & -1 
                     & \textbf{10.254.243.0:} 10.254.243.1, 10.254.243.2, 10.254.243.5, 10.254.243.6  
-                    & -1 & -1 & -1 & -1 & -1\\
+                    & -1 
+                    & -1 
+                    & -1\\
                 \hline
-                    \textbf{10.254.239.0:} 10.254.239.1, 10.254.239.2, 10.254.239.5, 10.254.239.6
-                    & -1 
-                    & -1 
+                    \textbf{10.254.239.0:} 10.254.239.1, 10.254.239.2, 10.254.239.5, 10.254.239.6 
                     & \textbf{10.254.239.0:} 10.254.239.1, 10.254.239.2, 10.254.239.5, 10.254.239.6
-                    & -1 & -1 & -1 & -1 & -1\\
+                    & -1 & -1 & -1 \\
                 \hline
                     \textbf{10.254.236.0:} 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22 
-                    & -1 
-                    & -1 
                     &  \textbf{10.254.236.0:} 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
-                    & -1 & -1 & -1 & -1 & -1\\
+                    & -1 & -1 & -1\\
                 \hline
             \end{tabular}{}
         }
@@ -75,40 +71,56 @@
     \begin{table}[ht]
         \centering
         \resizebox{\textwidth}{!}{%
-            \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+            \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
                  \hline
-                    \multicolumn{3}{|c|}{Day-1} & \multicolumn{3}{|c|}{Day-2} & \multicolumn{3}{|c|}{Day-3}\\
+                    \multicolumn{2}{|c|}{7/8/19} & \multicolumn{2}{|c|}{8/8/19} & \multicolumn{2}{|c|}{11/8/19}\\
                  \hline
-                    Afternoon & Evening & Night & Afternoon & Evening & Night & Afternoon & Evening & Night\\
+                    Afternoon(15:57) & Night(21.14) & Afternoon(11:40) & Night(19:28) & Afternoon(12:00) & Night\\
                 \hline
-                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                    \textbf{10.184.0.14: } 10.184.0.1, 10.184.0.2, 10.184.0.13, 10.184.0.14 
+                    & \textbf{10.184.0.14: } 10.184.0.1, 10.184.0.2, 10.184.0.13, 10.184.0.14 
+                    & \textbf{10.184.0.14: } 10.184.0.1, 10.184.0.2, 10.184.0.13, 10.184.0.14
+                    & \textbf{10.184.0.14: } 10.184.0.1, 10.184.0.2, 10.184.0.13, 10.184.0.14
+                    & \textbf{10.184.0.14: } 10.184.0.1, 10.184.0.2, 10.184.0.13, 10.184.0.14
+                    & -1\\
                 \hline
-                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                    \textbf{10.254.236.18: } 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
+                    & \textbf{10.254.236.18: } 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
+                    & \textbf{10.254.236.18: } 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
+                    & \textbf{10.254.236.18: } 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
+                    & \textbf{10.254.236.18: } 10.254.236.9, 10.254.236.10, 10.254.236.13, 10.254.236.14, 10.254.236.17, 10.254.236.18, 10.254.236.21, 10.254.236.22
+                    & -1\\
                 \hline
-                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
-                \hline
-                    -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                    \textbf{10.7.174.111: } 10.7.174.111, 10.7.174.113
+                    & \textbf{10.7.174.111: } 10.7.174.111, 10.7.174.113
+                    & \textbf{10.7.174.111: } 10.7.174.111, 10.7.174.113
+                    & \textbf{10.7.174.111: } 10.7.174.111, 10.7.174.113
+                    & \textbf{10.7.174.111: } 10.7.174.111, 10.7.174.113
+                    & -1\\
                 \hline
             \end{tabular}{}
         }
-        \caption{Analysis over WiFi}
+        \caption{Analysis over wife}
     \end{table}
+    \newpage
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
+    \setlength{\tabcolsep}{10pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} % Default value: 1
     \begin{table}[ht]
         \centering
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
                 \hline
                 \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{Capetown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
-                \cline{2-10}
+                \cline{2-11}
                 & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) \\
                 \hline
-                server1(Czech) & 17 & 123.7 & 18 & 200.9 & -1 & -1 & 6 & 6.5 & 6 & 5.73\\
+                s1(Czech) & 17 & 123.7 & 18 & 200.9 & -1 & -1 & 6 & 6.5 & 6 & 5.73\\
                 \hline
-                server2(USA)  & 13 & 20.4 & 15 & 217.4 & -1 & -1 & 7 & 3.0 & 8 & 18.7\\
+                s2(USA)  & 13 & 20.4 & 15 & 217.4 & -1 & -1 & 7 & 3.0 & 8 & 18.7\\
                 \hline
-                server3(Sydney) & 17 & 208.5 & 21 & 417.3 & -1 & -1 & 10 & 12.0 & 8 & 14.6\\
+                s3(Australia) & 17 & 208.5 & 21 & 417.3 & -1 & -1 & 14 & 208.1 & 11 & 189.1\\
                 \hline
             \end{tabular}{}
         }
@@ -120,7 +132,7 @@
             \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
                 \hline
                 \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{CapeTown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
-                \cline{2-10}
+                \cline{2-11}
                 & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
                 \hline
                 localhost & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 77.1\\
