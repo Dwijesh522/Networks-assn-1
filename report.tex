@@ -100,7 +100,7 @@
                 \hline
             \end{tabular}{}
         }
-        \caption{IP vs OS}
+        \caption{Analysis over wife}
     \end{table}
     \setlength{\tabcolsep}{10pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} % Default value: 1
@@ -123,9 +123,9 @@
                     \hline
             \end{tabular}{}
         }
-        \caption{Analysis over wife}
+        \caption{IP vs OS}
     \end{table}
-    \newpage
+    \clearpage
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
     \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -164,6 +164,33 @@
         }
         \caption{Tracerouting from IIT Delhi using Airtel 4G}
     \end{table}
+    \begin{enumerate}[a)]
+        \item
+        \begin{itemize}
+            \item Yes, the number of hops between nodes of same continent are lower when compared to nodes on different continents. This can be attributed to the fact that more distance is to be travelled (hence more hops) when the connection has to established overseas. 
+            \item \textbf{Few hops for google and facebook} can be due to
+            \begin{itemize}
+                \item direct peering with the local ISPs.
+                \item duplicating the original content to web servers in many continents to reduce the latency over the network.
+            \end{itemize}{}
+        \end{itemize}{}
+        \item \textbf{\# hops vs latency:}
+            \begin{itemize}
+                \item \textbf{\# hops: } In reality, traceroute's hop count does not reflect the actual number of hops between source and the destination ip. It can be more than or less than the hop count. Reasons for that can be transperent firewall,  or switches. Traceroute only shows level 3 hops.
+                \item \textbf{Latency: } Latency is not strictly related to \#hops. Table 4 reflects this fact. Consider (15, 217.4), (17, 123.7), (17, 208.5) pairs.
+            \end{itemize}{}
+        \item Web servers of University of Waterloo, University of Capetown are always resorted to the same IP address and the Google, Facebook resorts to different web servers when tracerouted from different continents. Reasons can be:
+        \begin{itemize}
+            \item Google and Facebook both duplicate their web content to web servers in different continents, because of to reduce the latency, reduce the network congestion. As a result tracerouting from different continents gives different IP address. While for the Universities, web content must be accessed from the same web server irrespective of the continent.
+            \item There can be duplication on the same web server to incorporate the traffic. Here we can have round robin protocol or similar. This type of duplication can also result in tracerouting to different IP address. 
+        \end{itemize}{}
+        \item Yes, the paths appear different. The paths obtained for corresponding ip addresses(with the server when tracerouted with the domain name) are relatively shorter.
+        \item 
+        \item needed to check from the data with net1.txt
+        \item the \#hops and hence the latency is higher relatively for when location of destination server is relatively farther
+        (comment - //Needed to check for more destination servers for better picture)
+    \end{enumerate}{}
+    \clearpage
 %-----------------------------------------------------------------------
 \section{Packet Analysis}
     \begin{enumerate}[a)]
@@ -226,6 +253,7 @@
                     \end{itemize}{}
             \end{enumerate}{}
     \end{enumerate}
+    \clearpage
 %-----------------------------------------------------------------------
 \section{Tinkering with the network setting}
 \subsection{Where to configure IP address and DNS server}

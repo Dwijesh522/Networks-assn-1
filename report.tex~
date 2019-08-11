@@ -100,6 +100,29 @@
                 \hline
             \end{tabular}{}
         }
+        \caption{IP vs OS}
+    \end{table}
+    \setlength{\tabcolsep}{10pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} % Default value: 1
+    \begin{table}[ht]
+        \centering
+        \resizebox{\textwidth}{!}{%
+            \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+                    \hline
+                        ip & os & ip & os & ip & os\\
+                    \hline
+                        10.184.0.14 & Cisco NX-OS & 10.184.0.1 & Cisco NX-OS & 10.184.0.2 & Apple Apple TV 5.X (86\%)\\
+                    \hline
+                        10.184.0.13 & Cisco NX-OS & 10.254.236.9 & Cisco NX-OS & 10.254.236.10 & Cisco NX-OS\\
+                    \hline
+                        10.254.236.13 & Cisco NX-OS & 10.254.236.14 & Cisco NX-OS & 10.254.236.17 & Cisco NX-OS\\
+                    \hline
+                    10.254.236.18 & Cisco NX-OS & 10.254.236.21 & Cisco NX-OS & 10.254.236.22 & Cisco NX-OS\\
+                    \hline
+                    10.7.174.111 & Linux(95\%) & 10.7.174.113 & Linux(95\%) &  & \\
+                    \hline
+            \end{tabular}{}
+        }
         \caption{Analysis over wife}
     \end{table}
     \newpage
