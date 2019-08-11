@@ -1,0 +1,238 @@
+ 1   10.184.0.14  4.187ms  4.472ms  3.848ms 
+  2   10.254.236.18  3.394ms  3.335ms  2.922ms 
+  3   10.7.174.111  3.475ms  3.094ms  2.270ms 
+
+
+prafful@prafful-the-pandu:~$ traceroute www.iitd.ac.in
+traceroute to www.iitd.ac.in (10.7.174.111), 64 hops max
+  1   10.184.0.14  4.187ms  4.472ms  3.848ms 
+  2   10.254.236.18  3.394ms  3.335ms  2.922ms 
+  3   10.7.174.111  3.475ms  3.094ms  2.270ms 
+prafful@prafful-the-pandu:~$ ^C
+prafful@prafful-the-pandu:~$ nmap -sn 10.184.0.14/24
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 15:57 IST
+Nmap scan report for _gateway (10.184.0.1)
+Host is up (0.0054s latency).
+Nmap scan report for 10.184.0.2
+Host is up (0.0033s latency).
+Nmap scan report for 10.184.0.13
+Host is up (0.015s latency).
+Nmap scan report for 10.184.0.14
+Host is up (0.0100s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 3.25 seconds
+prafful@prafful-the-pandu:~$ nmap -sn 10.254.236.18/24
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 15:58 IST
+Nmap scan report for 10.254.236.9
+Host is up (0.0088s latency).
+Nmap scan report for 10.254.236.10
+Host is up (0.0055s latency).
+Nmap scan report for 10.254.236.13
+Host is up (0.0031s latency).
+Nmap scan report for 10.254.236.14
+Host is up (0.0031s latency).
+Nmap scan report for 10.254.236.17
+Host is up (0.018s latency).
+Nmap scan report for 10.254.236.18
+Host is up (0.0030s latency).
+Nmap scan report for 10.254.236.21
+Host is up (0.0030s latency).
+Nmap scan report for 10.254.236.22
+Host is up (0.0030s latency).
+Nmap done: 256 IP addresses (8 hosts up) scanned in 3.09 seconds
+prafful@prafful-the-pandu:~$ nmap -sn 10.7.174.111/24
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 15:58 IST
+Nmap scan report for 10.7.174.111
+Host is up (0.0049s latency).
+Nmap scan report for 10.7.174.113
+Host is up (0.0046s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 17.02 seconds
+
+-----------------------------------------------------------------------------------------------------
+traceroute to www.iitd.ac.in (10.7.174.111), 64 hops max
+  1   10.184.0.14  5.161ms  3.116ms  3.329ms 
+  2   10.254.236.10  3.052ms  3.380ms  3.748ms 
+  3   10.7.174.111  2.040ms  2.230ms  1.883ms 
+
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 21:14 IST
+Nmap scan report for _gateway (10.184.0.1)
+Host is up (0.0092s latency).
+Nmap scan report for 10.184.0.2
+Host is up (0.0024s latency).
+Nmap scan report for 10.184.0.13
+Host is up (0.031s latency).
+Nmap scan report for 10.184.0.14
+Host is up (0.030s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.65 seconds
+
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 21:15 IST
+Nmap scan report for 10.254.236.9
+Host is up (0.0035s latency).
+Nmap scan report for 10.254.236.10
+Host is up (0.0035s latency).
+Nmap scan report for 10.254.236.13
+Host is up (0.0034s latency).
+Nmap scan report for 10.254.236.14
+Host is up (0.0033s latency).
+Nmap scan report for 10.254.236.17
+Host is up (0.0052s latency).
+Nmap scan report for 10.254.236.18
+Host is up (0.0033s latency).
+Nmap scan report for 10.254.236.21
+Host is up (0.0040s latency).
+Nmap scan report for 10.254.236.22
+Host is up (0.0062s latency).
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.62 seconds
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-07 21:16 IST
+Nmap scan report for 10.7.174.111
+Host is up (0.0037s latency).
+Nmap scan report for 10.7.174.113
+Host is up (0.0035s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 16.94 seconds
+
+----------------------------------------------------------------------------------------
+8/8/19 11:40am
+1   10.184.0.14  2.309ms  2.022ms  3.111ms 
+  2   10.254.236.10  3.085ms  2.163ms  2.003ms 
+  3   10.7.174.111  3.203ms  2.044ms  2.121ms 
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 11:51 IST
+Nmap scan report for _gateway (10.184.0.1)
+Host is up (0.0043s latency).
+Nmap scan report for 10.184.0.2
+Host is up (0.0023s latency).
+Nmap scan report for 10.184.0.13
+Host is up (0.012s latency).
+Nmap scan report for 10.184.0.14
+Host is up (0.0094s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.97 seconds
+
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 11:52 IST
+Nmap scan report for 10.254.236.9
+Host is up (0.0060s latency).
+Nmap scan report for 10.254.236.10
+Host is up (0.0071s latency).
+Nmap scan report for 10.254.236.13
+Host is up (0.0030s latency).
+Nmap scan report for 10.254.236.14
+Host is up (0.0030s latency).
+Nmap scan report for 10.254.236.17
+Host is up (0.0032s latency).
+Nmap scan report for 10.254.236.18
+Host is up (0.0031s latency).
+Nmap scan report for 10.254.236.21
+Host is up (0.0030s latency).
+Nmap scan report for 10.254.236.22
+Host is up (0.0031s latency).
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.93 seconds
+
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 11:52 IST
+Nmap scan report for 10.7.174.111
+Host is up (0.0038s latency).
+Nmap scan report for 10.7.174.113
+Host is up (0.0037s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 17.03 seconds
+
+
+
+--------------------------------------------------------------------------------------
+8/8/19 7:30 pm
+  1   10.184.0.14  4.517ms  3.450ms  3.522ms 
+  2   10.254.236.10  3.063ms  2.899ms  3.076ms 
+  3   10.7.174.111  4.440ms  3.359ms  2.989ms
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 19:28 IST
+Nmap scan report for _gateway (10.184.0.1)
+Host is up (0.0032s latency).
+Nmap scan report for 10.184.0.2
+Host is up (0.0026s latency).
+Nmap scan report for 10.184.0.13
+Host is up (0.0095s latency).
+Nmap scan report for 10.184.0.14
+Host is up (0.011s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 4.36 seconds
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 19:29 IST
+Nmap scan report for 10.254.236.9
+Host is up (0.0046s latency).
+Nmap scan report for 10.254.236.10
+Host is up (0.0046s latency).
+Nmap scan report for 10.254.236.13
+Host is up (0.0042s latency).
+Nmap scan report for 10.254.236.14
+Host is up (0.0041s latency).
+Nmap scan report for 10.254.236.17
+Host is up (0.0021s latency).
+Nmap scan report for 10.254.236.18
+Host is up (0.0027s latency).
+Nmap scan report for 10.254.236.21
+Host is up (0.0038s latency).
+Nmap scan report for 10.254.236.22
+Host is up (0.0038s latency).
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.56 seconds
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-08 19:30 IST
+Nmap scan report for www.iitd.ac.in (10.7.174.111)
+Host is up (0.0051s latency).
+Nmap scan report for 10.7.174.113
+Host is up (0.0049s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 16.86 seconds
+------------------------------------------------------------------------------
+11/08/19 12::00 pm
+traceroute to www.iitd.ac.in (10.7.174.111), 64 hops max
+  1   10.184.0.14  4.136ms  3.577ms  1.982ms 
+  2   10.254.236.18  2.098ms  2.115ms  2.109ms 
+  3   10.7.174.111  2.117ms  2.117ms  2.163ms 
+
+Nmap scan report for _gateway (10.184.0.1)
+Host is up (0.010s latency).
+Nmap scan report for 10.184.0.2
+Host is up (0.052s latency).
+Nmap scan report for 10.184.0.13
+Host is up (0.029s latency).
+Nmap scan report for 10.184.0.14
+Host is up (0.026s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 3.46 seconds
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-11 11:50 IST
+Nmap scan report for 10.254.236.9
+Host is up (0.0080s latency).
+Nmap scan report for 10.254.236.10
+Host is up (0.0079s latency).
+Nmap scan report for 10.254.236.13
+Host is up (0.015s latency).
+Nmap scan report for 10.254.236.14
+Host is up (0.015s latency).
+Nmap scan report for 10.254.236.17
+Host is up (0.015s latency).
+Nmap scan report for 10.254.236.18
+Host is up (0.016s latency).
+Nmap scan report for 10.254.236.21
+Host is up (0.0037s latency).
+Nmap scan report for 10.254.236.22
+Host is up (0.0037s latency).
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.94 seconds
+
+Nmap scan report for www.iitd.ac.in (10.7.174.111)
+Host is up (0.0049s latency).
+Nmap scan report for 10.7.174.113
+Host is up (0.0045s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 16.85 seconds
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
