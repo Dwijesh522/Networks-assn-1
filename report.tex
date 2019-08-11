@@ -91,7 +91,7 @@
                 \hline
             \end{tabular}{}
         }
-        \caption{Analysis over wife}
+        \caption{Analysis over WiFi}
     \end{table}
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
@@ -100,34 +100,34 @@
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
                 \hline
-                \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{web1} & \multicolumn{2}{|c|}{web2} & \multicolumn{2}{|c|}{web3} & \multicolumn{2}{|c|}{web4} & \multicolumn{2}{|c|}{web5}\\
+                \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{Capetown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
                 \cline{2-10}
-                & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
+                & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) \\
                 \hline
-                server1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                server1(Czech) & 17 & 123.7 & 18 & 200.9 & -1 & -1 & 6 & 6.5 & 6 & 5.73\\
                 \hline
-                server2 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                server2(USA)  & 13 & 20.4 & 15 & 217.4 & -1 & -1 & 7 & 3.0 & 8 & 18.7\\
                 \hline
-                server3 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                server3(Sydney) & 17 & 208.5 & 21 & 417.3 & -1 & -1 & 10 & 12.0 & 8 & 14.6\\
                 \hline
             \end{tabular}{}
         }
-        \caption{tracerouting from tracerouters from different continents}
+        \caption{Tracerouting through servers from different continents}
     \end{table}
     \begin{table}[!h]
         \centering
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
                 \hline
-                \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{web1} & \multicolumn{2}{|c|}{web2} & \multicolumn{2}{|c|}{web3} & \multicolumn{2}{|c|}{web4} & \multicolumn{2}{|c|}{web5}\\
+                \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{CapeTown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
                 \cline{2-10}
                 & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
                 \hline
-                localhost & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1\\
+                localhost & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 77.1\\
                 \hline
             \end{tabular}{}
         }
-        \caption{tracerouting from IIT Delhi using jio 4G}
+        \caption{Tracerouting from IIT Delhi using Airtel 4G}
     \end{table}
 %-----------------------------------------------------------------------
 \section{Packet Analysis}
