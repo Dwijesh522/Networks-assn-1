@@ -158,7 +158,7 @@
                 \cline{2-11}
                 & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
                 \hline
-                localhost & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 77.1\\
+                localhost & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 52.2\\
                 \hline
             \end{tabular}{}
         }
@@ -184,11 +184,18 @@
             \item Google and Facebook both duplicate their web content to web servers in different continents, because of to reduce the latency, reduce the network congestion. As a result tracerouting from different continents gives different IP address. While for the Universities, web content must be accessed from the same web server irrespective of the continent.
             \item There can be duplication on the same web server to incorporate the traffic. Here we can have round robin protocol or similar. This type of duplication can also result in tracerouting to different IP address. 
         \end{itemize}{}
-        \item Yes, the paths appear different. The paths obtained for corresponding ip addresses(with the server when tracerouted with the domain name) are relatively shorter.
+        \item Yes, the paths appear different. The different ip addresses found for the same domain name (google and facebook) are because of different web servers owned by the same company (provider), which are located in different locations of the world. When probed with the domain name, the server which is closely accessible from the client's location is set up.
+        Hence, the paths obtained for corresponding ip addresses(the server when tracerouted with the domain name) are relatively shorter when compared to other addresses related to the same host name.
+        An example to demonstrate this: the resultant addresses when probed for www.google.com from Czech Republic, USA and Sydney are 172.217.23.228, 172.3.100 and 172.217.6.36 respectively. The #hops and latency when these 3 ip addresses are probed from Sydney are:
+        \begin{itemize}
+            \item Czech : 18 hops and 330 ms
+            \item USA : 13 hops and 240 ms
+            \item Sydney : 11 hops and 184 ms
+        \end{itemize}{}
+        
         \item 
-        \item needed to check from the data with net1.txt
-        \item the \#hops and hence the latency is higher relatively for when location of destination server is relatively farther
-        (comment - //Needed to check for more destination servers for better picture)
+        \item Latency incurred within the ISP is greater than the latency caused by remaining network in most of the cases.
+        \item Yes, there is difference in the connectivity of my ISP with rest of the world. It is very well connected with the USA and UK networks when compared to other regions. This can also be attributed to the heavier traffic across these regions relative to others from India.
     \end{enumerate}{}
     \clearpage
 %-----------------------------------------------------------------------
