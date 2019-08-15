@@ -18,7 +18,7 @@
 \geometry{
     a4paper,
     % total={170mm,257mm},
-    left=3mm,
+    left=16mm,
     top=3mm,
 }
 
@@ -36,7 +36,7 @@
     \begin{table}[ht]
         \centering
         \resizebox{\textwidth}{!}{%
-            \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+            \begin{tabular}{|p{4.5cm}|p{4.5cm}|p{1.5cm}|p{1cm}|p{1cm}|}
                  \hline
                     Day-1 & \multicolumn{2}{|c|}{11/8/19} & \multicolumn{2}{|c|}{Day-3}\\
                  \hline
@@ -100,7 +100,7 @@
                 \hline
             \end{tabular}{}
         }
-        \caption{Analysis over wife}
+        \caption{Analysis over WiFi}
     \end{table}
     \setlength{\tabcolsep}{10pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} % Default value: 1
@@ -125,7 +125,6 @@
         }
         \caption{IP vs OS}
     \end{table}
-    \clearpage
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
     \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -154,12 +153,15 @@
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
                 \hline
-                \multirow{2}{2em}{Servers} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{CapeTown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
+                \multirow{2}{2em}{RTT} & \multicolumn{2}{|c|}{Waterloo} & \multicolumn{2}{|c|}{CapeTown} & \multicolumn{2}{|c|}{IIT Delhi} & \multicolumn{2}{|c|}{Google} & \multicolumn{2}{|c|}{Facebook}\\
                 \cline{2-11}
                 & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
                 \hline
-                localhost & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 52.2\\
+                Total path & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 52.2\\
                 \hline
+                last router in local ISP & 6 & 560.7 & 6 & 223.8 & -1 & -1 & 5 & 38.3 & 6 & 54.4\\
+                \hline
+                
             \end{tabular}{}
         }
         \caption{Tracerouting from IIT Delhi using Airtel 4G}
@@ -176,57 +178,37 @@
         \end{itemize}{}
         \item \textbf{\# hops vs latency:}
             \begin{itemize}
-                \item \textbf{\# hops: } In reality, traceroute's hop count does not reflect the actual number of hops between source and the destination ip. It can be more than or less than the hop count. Reasons for that can be transperent firewall,  or switches. Traceroute only shows level 3 hops.
+                \item \textbf{\# hops: } In reality, traceroute's hop count does not reflect the actual number of hops between source and the destination ip. It can be more than or less than the hop count. Reasons for that can be transparent firewall,  or switches. Trace route only shows level 3 hops.
                 \item \textbf{Latency: } Latency is not strictly related to \#hops. Table 4 reflects this fact. Consider (15, 217.4), (17, 123.7), (17, 208.5) pairs.
             \end{itemize}{}
-        \item Web servers of University of Waterloo, University of Capetown are always resorted to the same IP address and the Google, Facebook resorts to different web servers when tracerouted from different continents. Reasons can be:
+        \item Web servers of University of Waterloo, University of Capetown are always resorted to the same IP address and the Google, Facebook resorts to different web servers when trace routed from different continents. Reasons can be:
         \begin{itemize}
             \item Google and Facebook both duplicate their web content to web servers in different continents, because of to reduce the latency, reduce the network congestion. As a result tracerouting from different continents gives different IP address. While for the Universities, web content must be accessed from the same web server irrespective of the continent.
             \item There can be duplication on the same web server to incorporate the traffic. Here we can have round robin protocol or similar. This type of duplication can also result in tracerouting to different IP address. 
         \end{itemize}{}
         \item Yes, the paths appear different. The different ip addresses found for the same domain name (google and facebook) are because of different web servers owned by the same company (provider), which are located in different locations of the world. When probed with the domain name, the server which is closely accessible from the client's location is set up.
         Hence, the paths obtained for corresponding ip addresses(the server when tracerouted with the domain name) are relatively shorter when compared to other addresses related to the same host name.
-        An example to demonstrate this: the resultant addresses when probed for www.google.com from Czech Republic, USA and Sydney are 172.217.23.228, 172.3.100 and 172.217.6.36 respectively. The #hops and latency when these 3 ip addresses are probed from Sydney are:
+        An example to demonstrate this: the resultant addresses when probed for www.google.com from Czech Republic, USA and Sydney are 172.217.23.228, 172.3.100 and 172.217.6.36 respectively. The \#hops and latency when these 3 ip addresses are probed from Sydney are:
         \begin{itemize}
             \item Czech : 18 hops and 330 ms
             \item USA : 13 hops and 240 ms
             \item Sydney : 11 hops and 184 ms
         \end{itemize}{}
-        
-        \item 
-        \item Latency incurred within the ISP is greater than the latency caused by remaining network in most of the cases.\\
-        \setlength{\tabcolsep}{10pt} % Default value: 6pt
-                \renewcommand{\arraystretch}{0.9} %Default value: 1
-                \begin{table}[htbp]
-                    \centering
-                    \resizebox{\textwidth}{!}{%
-                    \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-                    \hline
-                        \multirow{2}{2em}{-1} & \multicolumn{2}{|c|}{-1} & \multicolumn{2}{|c|}{-1}\\
-                    \cline{2-5}
-                        & -1 & -1 & -1 & -1\\
-                    \hline
-                        -1 & -1 & -1 & -1 & -1\\
-                    \hline
-                        -1 & -1 & -1 & -1 & -1\\
-                    \hline
-                        -1 & -1 & -1 & -1 & -1\\
-                    \hline
-                        -1 & -1 & -1 & -1 & -1\\
-                    \hline
-                        -1 & -1 & -1 & -1 & -1\\
-                    \hline
-                    \end{tabular}{}
-                }
-        \caption{-1}
-        \end{table}
-        \item Yes, there is difference in the connectivity of my ISP with rest of the world. It is very well connected with the USA and UK networks when compared to other regions. This can also be attributed to the heavier traffic across these regions relative to others from India.
+        \item If the local ISPs peer with google or facebook, the data packets flow through the peered exchange point and reach the google server(google data center) directly. Else, they flow through a longer path through different countries. The following countries do not have their local ISPs peered with
+        \begin{itemize}
+            \item Google: South Korea (Japan), Dijbouti (Dubai), New Zealand (Japan), some parts of Australia(Japan)
+            {The places in the brackets are the corresponding places where the google's POP is reached. Most of the European countries like Germany, France, Italy etc; Asian countries like India, Japan, UAE and both American continents have good amount of peering with google}
+            \item Facebook : Denmark, Colombo, South Korea
+        \end{itemize}
+        \item Latency incurred within the ISP is greater than the latency caused by remaining network in most of the cases (Refer Table 5). The major causes for latency are transmission mediums, propagation delays, routers and storage delays. The higher latency with my local ISP can be due to the Storage delays that occur at switches and bridges.
+        \item Yes, there is difference in the connectivity of my ISP with rest of the world. It is very well connected with the USA and UK networks when compared to other regions. This can also be attributed to the heavier traffic across these regions relative to others from India.\\
+        NOTE: IIT Delhi web server blocks traceroute request from any server. So, whenever www.iitd.ac.in is tracerouted it reaches max hop limit (30 or 64) with all the TTLs after 10th or 11th hop having all the 3 packets timed out(returning *). Because of which, accurate \#hops and latency could not be concluded.
+         
     \end{enumerate}{}
-    \clearpage
 %-----------------------------------------------------------------------
 \section{Packet Analysis}
     \begin{enumerate}[a)]
-        \item Grabbing and analysing packats while visiting \href{www.iitd.ac.in}{www.iitd.ac.in} website
+        \item Grabbing and analysing packets while visiting \href{www.iitd.ac.in}{www.iitd.ac.in} website
             \begin{enumerate}[i)]
                 \item DNS filter
                     \begin{itemize}
@@ -234,7 +216,7 @@
                         \item Asking for IP addresses for the requested domain name (\href{www.iitd.ac.in}{iitd.ac.in}) and all the domain names which are linked with that web page(i.e., \href{www.library.iitd.ac.in}{library.iitd.ac.in})
                         \item IIT Delhi DNS server replies with IP address of the queried domain name. For example, reply for \href{www.iitd.ac.in}{iitd.ac.in} domain name is 10.7.174.111
                         \item Time taken for the both query and reply for \href{www.iitd.ac.in}{iitd.ac.in} domain name is 0.008394231 seconds
-                        \item Different time taken for different queries
+                        \item Total time taken to resolve all DNS queries is: 3.67165445 seconds
                     \end{itemize}{}
                 \item HTTP filter
                     \begin{itemize}
@@ -251,7 +233,8 @@
                         \begin{itemize}
                             \item There are multiple TCP connections made from source port to destination port(80). Each TCP connection defers in source port(43001-43187). By default each connection is persistent unless client explicitly signals the closing of TCP connection \item Multiple HTTP requests-responses can be made on the same TCP connection. In general these requests are pipe-lined
                             \item Such HTTP requests-responses can be made on all the TCP connections between the source and the destination host
-                            \item This configuration makes TCP protocols to work more efficiently, and reduces the network traffic
+                            \item This configuration makes TCP protocols to work more efficiently, and reduces the network traffic.
+                            \item Total 6 TCP connections were established between localhost(me) and the destination server, that includes the following destination ports: 43082, 43084, 43086, 43088, 43090, 43092
                         \end{itemize}{}
                         \item Yes, there are some content objects that are fetched on the same TCP port because of multiple HTTP requests can be made on the same TCP connection
                         \item After any TCP connection is established, client sends an HTTP request to server and as soon as the server receives the request it sends back a TCP ack packet to the client and vice versa
@@ -285,7 +268,6 @@
                     \end{itemize}{}
             \end{enumerate}{}
     \end{enumerate}
-    \clearpage
 %-----------------------------------------------------------------------
 \section{Tinkering with the network setting}
 \subsection{Where to configure IP address and DNS server}
