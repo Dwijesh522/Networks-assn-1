@@ -24,7 +24,7 @@
 
 \title{Assignment 1}
 \author{Gohil Dwijesh \\ 2017CS50407
-        \and Prafful \\ 2017CS10369}
+        \and Prafful Ravuri \\ 2017CS10369}
 \date{August 2019}
     
 \begin{document}
@@ -119,6 +119,9 @@
         }
         \caption{IP vs OS}
     \end{table}
+    \begin {itemize}
+    \item \textbf{NOTE:} Here, while probing into sub networks, we used 24 as the network prefix length and we couldn't find any transitory devices. Even at 22 it remained the same.
+    \end {itemize}
 %-----------------------------------------------------------------------
 \section{Internet Architecture}
     \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -132,11 +135,11 @@
                 \cline{2-11}
                 & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) & \# Hops & latency(ms) \\
                 \hline
-                s1(Czech) & 17 & 123.7 & 18 & 200.9 & -1 & -1 & 6 & 6.5 & 6 & 5.73\\
+                s1(Czech) & 17 & 123.7 & 18 & 200.9 & - & - & 6 & 6.5 & 6 & 5.73\\
                 \hline
-                s2(USA)  & 13 & 20.4 & 15 & 217.4 & -1 & -1 & 7 & 3.0 & 8 & 18.7\\
+                s2(USA)  & 13 & 20.4 & 15 & 217.4 & - & - & 7 & 3.0 & 8 & 18.7\\
                 \hline
-                s3(Australia) & 17 & 208.5 & 21 & 417.3 & -1 & -1 & 14 & 208.1 & 11 & 189.1\\
+                s3(Australia) & 17 & 208.5 & 21 & 417.3 & - & - & 14 & 208.1 & 11 & 189.1\\
                 \hline
             \end{tabular}{}
         }
@@ -151,9 +154,9 @@
                 \cline{2-11}
                 & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency & \# Hops & latency \\
                 \hline
-                Total path & 14 & 476 & 17 & 682.5 & -1 & -1 & 10 & 78.4 & 9 & 52.2\\
+                Total path & 14 & 476 & 17 & 682.5 & - & - & 10 & 78.4 & 9 & 52.2\\
                 \hline
-                last router in local ISP & 6 & 560.7 & 6 & 223.8 & -1 & -1 & 5 & 38.3 & 6 & 54.4\\
+                last router in local ISP & 6 & 560.7 & 6 & 223.8 & 6 & 34.7 & 5 & 38.3 & 6 & 54.4\\
                 \hline
                 
             \end{tabular}{}
@@ -190,15 +193,16 @@
         \end{itemize}{}
         \item If the local ISPs peer with google or facebook, the data packets flow through the peered exchange point and reach the google server(google data center) directly. Else, they flow through a longer path through different countries. The following countries do not have their local ISPs peered with
         \begin{itemize}
-            \item Google: South Korea (Japan), Dijbouti (Dubai), New Zealand (Japan), some parts of Australia(Japan)
-            {The places in the brackets are the corresponding places where the google's POP is reached. Most of the European countries like Germany, France, Italy etc; Asian countries like India, Japan, UAE and both American continents have good amount of peering with google}
+            \item Google: South Korea (Japan), Dijbouti (Dubai), New Zealand (Japan), some parts of Australia(Japan) (The places in the brackets are the corresponding places where the google's POP is reached). Most of the European countries like Germany, France, Italy etc; Asian countries like India, Japan, UAE and both American continents have local peering with google.
             \item Facebook : Denmark, Colombo, South Korea
         \end{itemize}
         \item Latency incurred within the ISP is greater than the latency caused by remaining network in most of the cases (Refer Table 5). The major causes for latency are transmission mediums, propagation delays, routers and storage delays. The higher latency with my local ISP can be due to the Storage delays that occur at switches and bridges.
-        \item Yes, there is difference in the connectivity of my ISP with rest of the world. It is very well connected with the USA and UK networks when compared to other regions. This can also be attributed to the heavier traffic across these regions relative to others from India.\\
-        NOTE: IIT Delhi web server blocks traceroute request from any server. So, whenever www.iitd.ac.in is tracerouted it reaches max hop limit (30 or 64) with all the TTLs after 10th or 11th hop having all the 3 packets timed out(returning *). Because of which, accurate \#hops and latency could not be concluded.
-         
+        \item Yes, there is difference in the connectivity of my ISP with rest of the world. It is very well connected with the USA and UK networks when compared to other regions. This can also be attributed to the heavier traffic across these regions relative to others from India.
     \end{enumerate}{}
+    \begin{itemize}
+        \item \textbf{NOTE:} IIT Delhi web server blocks traceroute request from any server. So, whenever www.iitd.ac.in is tracerouted it reaches max hop limit (30 or 64) with all the TTLs after 10th or 11th hop having all the 3 packets timed out(returning *). Because of which, accurate \#hops and latency could not be concluded.
+    \end{itemize}
+        
 %-----------------------------------------------------------------------
 \section{Packet Analysis}
     \begin{enumerate}[a)]
